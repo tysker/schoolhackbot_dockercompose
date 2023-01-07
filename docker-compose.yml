@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  app:
+    image: tyskerdocker/schoolhackbot:v2
+    container_name: schoolHackBot
+    restart: unless-stopped
+    command: npm run main
+    volumes:
+      - ./data:/home/data
